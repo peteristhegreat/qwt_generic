@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 
 #include <qwt_legend_label.h>
+#include "canvaspicker.h"
 
 // https://github.com/VladimirSap/Qwt_Tutorial
 
@@ -24,6 +25,8 @@ MainWindow::MainWindow(QWidget *parent) :
     enablePicker();
 
     showCurve(curve, true);
+
+    CanvasPicker *cp = new CanvasPicker( ui->plot );
 }
 
 MainWindow::~MainWindow()
@@ -179,21 +182,21 @@ void MainWindow::click_on_canvas( const QPoint &pos )
 }
 
 
-void MainWindow::on_moveByXButton_clicked()
-{
-    double x = 0.0;
+//void MainWindow::on_moveByXButton_clicked()
+//{
+//    double x = 0.0;
 
 
-    QString spinBoxText = ui->changeXSpinBox->text().replace(
-                QLocale().decimalPoint(), QLatin1Char('.'));
+//    QString spinBoxText = ui->changeXSpinBox->text().replace(
+//                QLocale().decimalPoint(), QLatin1Char('.'));
 
-    double xChangeValue = spinBoxText.toDouble();
+//    double xChangeValue = spinBoxText.toDouble();
 
-    for (int i = 0; i <points.size(); i++) {
-        x = points[i].x();
-        points[i].setX(x + xChangeValue);
-    }
+//    for (int i = 0; i <points.size(); i++) {
+//        x = points[i].x();
+//        points[i].setX(x + xChangeValue);
+//    }
 
-    curve->setSamples(points);
-    ui->plot->replot();
-}
+//    curve->setSamples(points);
+//    ui->plot->replot();
+//}

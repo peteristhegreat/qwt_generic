@@ -13,9 +13,11 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    canvaspicker.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    canvaspicker.h
 
 FORMS    += mainwindow.ui
 

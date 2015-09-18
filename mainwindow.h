@@ -34,7 +34,7 @@ private Q_SLOTS:
     void click_on_canvas( const QPoint &pos );
 
 
-    void on_moveByXButton_clicked();
+//    void on_moveByXButton_clicked();
 //    void updateLegend( const QVariant &, const QList<QwtLegendData> & );
     void legendChecked( const QVariant &, bool );
 private:
@@ -47,6 +47,7 @@ private:
     void addPlotGrid();
 
     QwtPlotCurve *curve;
+    QwtSymbol * symbol;
     QPolygonF points;
     void addCurve();
 
